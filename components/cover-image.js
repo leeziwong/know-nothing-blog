@@ -15,7 +15,7 @@ export default function CoverImage({ title, src, slug, height, width }) {
       height={height}
     />
   )
-  return (
+  return src ? (
     <div className="sm:mx-0">
       {slug ? (
         <Link as={`/posts/${slug}`} href="/posts/[slug]">
@@ -25,5 +25,5 @@ export default function CoverImage({ title, src, slug, height, width }) {
         image
       )}
     </div>
-  )
+  ) : null
 }
